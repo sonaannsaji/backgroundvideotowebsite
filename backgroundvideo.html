@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width,initial -scale=1.0">
+    <title> We are Engineers</title>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <div class="hero">
+      <div class="logo">
+        <img src="mechanical.png">
+      </div>
+      <video src="robot.mp4" muted loop autoplay id="backvideo"></video>
+    <div class="sidebar">
+      <div class="text-box">
+        <h1> ENGINEERS </h1>
+        <h4>Scientists study the world as it is, engineers create the world that never has been</h4>
+        <div class="line"></div>
+      </div>
+<div class="content">
+  <h1> The engineer has been, and is, a maker of history</h1>
+<div class="btn" id="playBtn">
+  <img src="play.jpeg" id="icon"> Watch Video
+</div>
+</div>
+<script>
+  var backvideo =document.getElementById('backvideo');
+  var playBtn=document.getElementById('playBtn');
+  var icon=document.getElementById('icon');
+  playBtn.onclick=function(){
+    backvideo.style.display="block";
+
+    if(backvideo.paused){
+      backvideo.play();
+      icon.src ="pause.png";
+    }
+    else{
+      backvideo.pause();
+      icon.src="play.jpeg";
+    }
+  }
+</script>
+  </body>
+</html>
